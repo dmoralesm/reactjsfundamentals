@@ -7,7 +7,7 @@ class ConfirmBattleContainer extends Component {
     super()
     this.state = {
       isLoading: true,
-      playerInfo: []
+      playerInfos: []
     }
   }
   componentWillMount() {
@@ -21,16 +21,26 @@ class ConfirmBattleContainer extends Component {
       console.log('PLAYERS', players)
       this.setState({
           isLoading: false,
-          //playerInfo: [players[0], players[1]]
-          playerInfo: players
+          //playerInfos: [players[0], players[1]]
+          playerInfos: players
       })
     })
+  }
+  handleInitiateBattle() {
+    this.context.router.push({
+      pathname: '/results',
+      state: {
+        playerInfos: this.state.playersInfo
+      }
+    })
+
   }
   render() {
     return (
       <ConfirmBattle
         isLoading={this.state.isLoading}
-        playersInfo={this.state.playerInfo}/>
+        playersInfo={this.state.playerInfos}
+        onInitiateBattle={() => this.handleInitiateBattle()}/>
     )
   }
 }
