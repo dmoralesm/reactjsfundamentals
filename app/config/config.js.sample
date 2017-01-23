@@ -1,0 +1,5 @@
+const config = {
+  GITHUB_TOKEN: 'e06623cacd06dc67a177be68702122570b4eb395'
+}
+
+export default config
