@@ -3,11 +3,12 @@ import {Link} from 'react-router'
 import styles from '../styles'
 import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
+import MainContainer from './MainContainer'
 
 const ConfirmBattle = (props) => {
   return props.isLoading
     ? <p>LOADING!</p>
-    : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
+    : <MainContainer>
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>
           <UserDetailsWrapper header="Player 1">
@@ -34,7 +35,7 @@ const ConfirmBattle = (props) => {
             </Link>
           </div>
         </div>
-      </div>
+      </MainContainer>
 }
 
 ConfirmBattle.propTypes = {
