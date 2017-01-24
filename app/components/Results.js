@@ -4,6 +4,7 @@ import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
 import {Link} from 'react-router'
 import MainContainer from './MainContainer'
+import Loading from './Loading'
 
 const StartOver = () => {
   return (
@@ -17,9 +18,7 @@ const StartOver = () => {
 
 const Results = props => {
   if(props.isLoading) {
-    return (
-      <p>LOADING</p>
-    )
+    return <Loading text='One moment' />
   }
 
   if (props.scores[0] === props.scores[1]) {

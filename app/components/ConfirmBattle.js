@@ -4,10 +4,11 @@ import styles from '../styles'
 import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
 import MainContainer from './MainContainer'
+import Loading from './Loading'
 
 const ConfirmBattle = (props) => {
   return props.isLoading
-    ? <p>LOADING!</p>
+    ? <Loading />
     : <MainContainer>
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>

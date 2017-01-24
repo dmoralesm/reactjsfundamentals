@@ -3,7 +3,6 @@ import ReactRouter, {Link} from 'react-router'
 import MainContainer from './MainContainer'
 
 const Home = (props) => {
-  let {transparentBg} = styles
   return (
     <MainContainer>
       <h1>Github Battle</h1>
