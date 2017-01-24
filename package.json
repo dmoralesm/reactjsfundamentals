@@ -1,16 +1,21 @@
 {
   "name": "reactjsfundamentals",
   "version": "1.0.0",
-  "description": "",
+  "description": "React.js Fundamentals course project",
   "main": "index.js",
   "scripts": {
-    "production": "webpack -p",
-    "start": "webpack-dev-server --progress"
+    "production": "./node_modules/.bin/webpack -p",
+    "start": "./node_modules/.bin/webpack-dev-server --progress --display-error-details"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmoralesm/reactjsfundamentals.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "David M.",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
