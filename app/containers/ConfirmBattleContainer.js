@@ -10,15 +10,10 @@ class ConfirmBattleContainer extends Component {
       playersInfo: []
     }
   }
-  componentWillMount() {
-    console.log('componentWillMount')
-  }
   componentDidMount() {
     const query = this.props.location.query
-    //console.log('QUERY: ', query)
     githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
     .then(players => {
-      console.log('PLAYERS', players)
       this.setState({
           isLoading: false,
           playersInfo: players
