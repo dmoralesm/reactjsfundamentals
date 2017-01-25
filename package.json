@@ -4,7 +4,7 @@
   "description": "React.js Fundamentals course project",
   "main": "index.js",
   "scripts": {
-    "production": "./node_modules/.bin/webpack -p",
+    "production": "./node_modules/.bin/webpack -p --config ./webpack.production.config.js --progress",
     "start": "./node_modules/.bin/webpack-dev-server --progress --display-error-details"
   },
   "repository": {

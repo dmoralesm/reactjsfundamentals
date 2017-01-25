@@ -1,12 +1,18 @@
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
+var WebpackEnv = new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify('production')
+  }
+});
+var WebpackUglifyJsPlugin = new webpack.optimize.UglifyJsPlugin();
 
 module.exports = {
-  devtool: 'inline-source-map',
   entry: [
     './app/index.js'
   ],
@@ -27,8 +33,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig],
-  devServer: {
-    port: 3000
-  }
+  plugins: [HtmlWebpackPluginConfig, WebpackEnv, WebpackUglifyJsPlugin]
 }
