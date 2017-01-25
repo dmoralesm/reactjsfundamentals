@@ -19,7 +19,7 @@ const config = {
 }
 ```
 
-Lastly, run `npm start` and view project running at http://localhost:3000
+Lastly, run `npm start` and view project running at <http://localhost:3000>
 
 [1]: https://online.reacttraining.com/courses/50507
 [2]: https://github.com/settings/tokens
